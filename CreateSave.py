@@ -1,4 +1,4 @@
-import layerCreate, nerronsConnection,neuronsCaulculation
+import layerCreate, nerronsConnection, neuronsCaulculation
 
 layer1 = layerCreate.layerCreate(1)
 neuron = layer1.get(list(layer1.keys())[0])
