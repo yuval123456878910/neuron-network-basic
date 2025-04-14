@@ -12,7 +12,7 @@ after you did the steps you need to caulculate the layers you do this by using t
 Finel you output (print) the last line.
 
 # example
-#inpurting functions<br>
+#importing functions<br>
 import layerCreate, nerronsConnection, neuronsCaulculation<br>
 
 #layers setup <br>
