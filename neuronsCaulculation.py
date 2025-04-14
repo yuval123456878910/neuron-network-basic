@@ -10,7 +10,7 @@ def neuronCaulculation(now,past):
             past_value = past.get(past_nerrons)
             past_input = past_value.get("value")
             input_have += past_input
-        value["value"] = input_have
+        value["input"] = input_have
 
         new_have = input_have * weight + bias
         value["value"] = new_have
