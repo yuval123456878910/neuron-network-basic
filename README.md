@@ -10,6 +10,40 @@ after you did the steps you need to caulculate the layers you do this by using t
 
 Finel you output (print) the last line.
 
-credit:
+# example
+#inpurting functions
+import layerCreate, nerronsConnection, neuronsCaulculation
+
+#layers setup
+layer1 = layerCreate.layerCreate(2)
+layer2 = layerCreate.layerCreate(3)
+layer3 = layerCreate.layerCreate(3)
+layer4 = layerCreate.layerCreate(2)
+
+
+#setting the first input
+layerVal1 = layer1.get(list(layer1.keys())[0])
+layerVal1["value"] = 10
+layer1[list(layer1.keys())[0]] = layerVal1
+
+layerVal2 = layer1.get(list(layer1.keys())[1])
+layerVal2["value"] = 20
+layer1[list(layer1.keys())[1]] = layerVal2
+
+#connecting
+nerronsConnection.neuronsConnection(layer2,layer1)
+nerronsConnection.neuronsConnection(layer3,layer2)
+nerronsConnection.neuronsConnection(layer4,layer3)
+
+#caulculting
+neuronsCaulculation.neuronCaulculation(layer2,layer1)
+neuronsCaulculation.neuronCaulculation(layer3,layer2)
+neuronsCaulculation.neuronCaulculation(layer4,layer3)
+
+#output
+print(layer1, layer2, layer3, layer4)
+
+
+# credit:
 Yuval t++++++n l+++++++++f
 
