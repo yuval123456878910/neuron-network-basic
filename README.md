@@ -11,37 +11,37 @@ after you did the steps you need to caulculate the layers you do this by using t
 Finel you output (print) the last line.
 
 # example
-#inpurting functions
-import layerCreate, nerronsConnection, neuronsCaulculation
+#inpurting functions<br>
+import layerCreate, nerronsConnection, neuronsCaulculation<br>
 
-#layers setup
-layer1 = layerCreate.layerCreate(2)
-layer2 = layerCreate.layerCreate(3)
-layer3 = layerCreate.layerCreate(3)
-layer4 = layerCreate.layerCreate(2)
+#layers setup <br>
+layer1 = layerCreate.layerCreate(2)<br>
+layer2 = layerCreate.layerCreate(3)<br>
+layer3 = layerCreate.layerCreate(3)<br>
+layer4 = layerCreate.layerCreate(2)<br>
+<br>
+<br>
+#setting the first input<br>
+layerVal1 = layer1.get(list(layer1.keys())[0])<br>
+layerVal1["value"] = 10<br>
+layer1[list(layer1.keys())[0]] = layerVal1<br>
+<br>
+layerVal2 = layer1.get(list(layer1.keys())[1])<br>
+layerVal2["value"] = 20<br>
+layer1[list(layer1.keys())[1]] = layerVal2<br>
+<br>
+#connecting<br>
+nerronsConnection.neuronsConnection(layer2,layer1)<br>
+nerronsConnection.neuronsConnection(layer3,layer2)<br>
+nerronsConnection.neuronsConnection(layer4,layer3)<br>
 
-
-#setting the first input
-layerVal1 = layer1.get(list(layer1.keys())[0])
-layerVal1["value"] = 10
-layer1[list(layer1.keys())[0]] = layerVal1
-
-layerVal2 = layer1.get(list(layer1.keys())[1])
-layerVal2["value"] = 20
-layer1[list(layer1.keys())[1]] = layerVal2
-
-#connecting
-nerronsConnection.neuronsConnection(layer2,layer1)
-nerronsConnection.neuronsConnection(layer3,layer2)
-nerronsConnection.neuronsConnection(layer4,layer3)
-
-#caulculting
-neuronsCaulculation.neuronCaulculation(layer2,layer1)
-neuronsCaulculation.neuronCaulculation(layer3,layer2)
-neuronsCaulculation.neuronCaulculation(layer4,layer3)
-
-#output
-print(layer1, layer2, layer3, layer4)
+#caulculting<br>
+neuronsCaulculation.neuronCaulculation(layer2,layer1)<br>
+neuronsCaulculation.neuronCaulculation(layer3,layer2)<br>
+neuronsCaulculation.neuronCaulculation(layer4,layer3)<br>
+<br>
+#output<br>
+print(layer1, layer2, layer3, layer4)<br>
 
 
 # credit:
